@@ -21,3 +21,6 @@ SHELL=/bin/sh
 47 6	* * 7	root	test -x /usr/sbin/anacron || { cd / && run-parts --report /etc/cron.weekly; }
 52 6	1 * *	root	test -x /usr/sbin/anacron || { cd / && run-parts --report /etc/cron.monthly; }
 #
+#K CRON LINES 
+# -nightly backup to my github at 23:55 
+55 23   * * *   keiran  /home/keiran/_K/_CODE/./k-git-push.sh
