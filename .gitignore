@@ -1,0 +1,39 @@
+#FIRST, EXCLUDE EVERYTHING (NB: the leading / is important for the lower whole-directory logic. Note also that:  !*/  is not required) ...
+/*
+
+#THEN OVERRULE WITH THE *SPECIFIC FILES* I WANT....
+#STARTING WITH THIS .gitignore
+!/.gitignore
+
+#AND THEN WHOLE DIRECTORIES I WANT (see https://stackoverflow.com/questions/1248570/how-do-i-tell-git-to-ignore-everything-except-a-subdirectory)
+#...the top level directory under which the sub-trees are located
+!/etc
+#...ignore all the loose files in etc
+/etc/*
+#...except those i want
+!/etc/crontab
+!/etc/sudoers
+
+# allow traversal into the path we want
+!/home
+/home/*
+!/home/keiran
+/home/keiran/*
+!/home/keiran/.openclaw
+
+# ---- exclusions inside openclaw ----
+/home/keiran/.openclaw/**/*.jpg
+/home/keiran/.openclaw/**/*.tar.gz
+/home/keiran/.openclaw/**/*.bak*
+# secrets and chat/session state inside openclaw
+/home/keiran/.openclaw/.env
+/home/keiran/.openclaw/**/auth-profiles.json
+/home/keiran/.openclaw/**/sessions/
+/home/keiran/.openclaw/**/*.jsonl
+/home/keiran/.openclaw/**/*.jsonl.deleted.*
+/home/keiran/.openclaw/**/sessions.json
+# credentials
+/home/keiran/.openclaw/credentials/
+# exclude databases and backups inside openclaw
+/home/keiran/.openclaw/**/*.sqlite
+/home/keiran/.openclaw/**/*.sqlite.*

@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "socket": {
+    "path": "/home/keiran/.openclaw/exec-approvals.sock",
+    "token": "qbziY02WXmFmQ1RomNyL8e0NoFuudVzC"
+  },
+  "defaults": {},
+  "agents": {}
+}
