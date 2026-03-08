@@ -1,6 +1,6 @@
 ---
 name: remote-ansible-diun
-description: SSH to keiran@10.1.5.50 and run the remote alias `a-diu-n` (ansible docker image update on Synology NAS). Use when user asks to run docker image update, ansible update on NAS, or explicitly says a-diu-n.
+description: SSH to keiran@10.1.5.50 and run the remote alias `a-diu-n` (ansible docker image update on Synology NAS). Use when user asks naturally for things like "update docker images on the NAS", "run NAS docker updates", "run a-diu-n", or ansible image updates on Synology.
 ---
 
 # Remote Ansible DIU-N
@@ -10,7 +10,11 @@ Run one fixed remote operation: connect over SSH and execute alias `a-diu-n` on 
 ## Workflow
 
 1. Execute the helper script: `scripts/run-remote-ansible-diun.sh`.
-2. Report success/failure and include the key error line on failure.
+2. This run can take ~10 minutes; allow a long timeout and avoid rapid polling loops.
+3. On success, send the user a compact recap containing only:
+   - `TASK [COMPARE initial and final outputs]`
+   - `PLAY RECAP`
+4. On failure, report the key SSH/Ansible error and next action.
 
 ## Command
 
