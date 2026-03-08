@@ -1,6 +1,6 @@
 ---
 name: git-push
-description: Run Keiran's host-level git sync script to add, commit, and push filesystem-backed changes. Use when the user asks to sync, commit, push, or "run k-git-push"; after meaningful file edits; or when validating repo sync status.
+description: Run Keiran's host-level git sync script to add, commit, and push filesystem-backed changes. Use when the user asks to sync/commit/push, after meaningful file edits, and automatically after major state changes (skills, agent config/routing, cron, heartbeat, identity/workspace setup).
 ---
 
 # Git Push

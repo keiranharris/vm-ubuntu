@@ -117,6 +117,21 @@ Reactions are lightweight social signals. Humans use them constantly — they sa
 
 Skills provide your tools. When you need one, check its `SKILL.md`. Keep local notes (camera names, SSH details, voice preferences) in `TOOLS.md`.
 
+### Git push policy (major state changes)
+
+After any major state change to the OpenClaw setup, run:
+
+`/home/keiran/.openclaw/workspace-keiran/skills/git-push/scripts/run-git-push.sh`
+
+Treat these as major state changes:
+- Skill add/update/remove
+- Agent config, bindings, identity, workspace mapping changes
+- Cron or heartbeat changes
+- Auth/channel routing changes
+- Any structural file/layout cleanup under `.openclaw`
+
+Do this automatically (no prompt needed) unless the user asks not to push.
+
 **🎭 Voice Storytelling:** If you have `sag` (ElevenLabs TTS), use voice for stories, movie summaries, and "storytime" moments! Way more engaging than walls of text. Surprise people with funny voices.
 
 **📝 Platform Formatting:**
