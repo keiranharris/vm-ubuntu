@@ -47,7 +47,7 @@
       "enabled": true,
       "notify": true,
       "createdAtMs": 1771872896982,
-      "updatedAtMs": 1772734576603,
+      "updatedAtMs": 1772994179536,
       "schedule": {
         "kind": "cron",
         "expr": "15 5 * * 1-5",
@@ -59,7 +59,7 @@
         "kind": "agentTurn",
         "model": "openai-codex/gpt-5.3-codex",
         "timeoutSeconds": 120,
-        "message": "Generate Keiran’s daily Cronulla dawn-run brief for right now.\n\nTone/personality:\n- Energetic, spicy, playful, motivating.\n- Keep it sharp and concise.\n- Telegram-friendly.\n\nOutput format (strict):\n- Start with one short greeting line: \"Morning Keiran! Here's your Cronulla beach dawn-run intel:\"\n- Then output bullet lines in exactly this order and label style, with one emoji per line:\n  • 🧭 HEADLINE:\n  • 🌤️ WEATHER:\n  • 💧 HUMIDITY:\n  • 🌅 SUNRISE:\n  • 🌧️ RAIN RISK:\n  • 🌡️ TEMP (NEXT 2H):\n  • 💨 WIND (NEXT 2H):\n  • 🌊 TIDE:\n\nRating system for HEADLINE:\n- Use a 3-tick run rating where:\n  - ✅✅✅ = amazing run conditions\n  - ✅✅ = decent / good enough\n  - ✅ = marginal / caution\n  - ❌ = poor / likely skip\n- Include a short spicy call-to-action phrase after the rating.\n\nScoring priorities (most to least important):\n1) Rain risk in next 2 hours (deal-killer)\n2) Tide status (lower is better; approaching low tide = positive)\n3) Wind in next 2h (sustained + gusts; above 20 km/h unpleasant)\n\nDecision guidance:\n- If rain likely in next 2h, headline should be ❌ with a clear warning.\n- If no rain + tide dropping toward low + manageable wind, headline should trend toward ✅✅✅.\n\nField requirements:\n- WEATHER: concise condition summary only.\n- HUMIDITY: current humidity percentage right now at the report instant.\n- SUNRISE: local sunrise time for Cronulla today.\n- RAIN RISK: explicit next-2h risk statement.\n- TEMP (NEXT 2H): temperature range expected over the next 2 hours.\n- WIND (NEXT 2H): direction + sustained wind range over next 2 hours + gust speed.\n- TIDE: no percentages. Use simple directional phrasing with next low/high and last opposite tide time.\n\nWIND line format is mandatory:\n- \"• 💨 WIND (NEXT 2H): <DIR> <SUSTAINED_MIN>-<SUSTAINED_MAX> km/h, gusting to <GUST> km/h\"\n- Never output N/A for gusts. If missing, estimate conservatively and output numeric km/h.\n\nTIDE line format is mandatory:\n- \"• 🌊 TIDE: currently dropping to low at <TIME> (last high tide was at <TIME>)\"\nOR\n- \"• 🌊 TIDE: currently rising to high at <TIME> (last low tide was at <TIME>)\"\n\nDo not include tide percentages.\nDo not add extra sections or paragraphs. Use current local weather + marine/tide data for Cronulla where available."
+        "message": "Generate Keiran’s daily Cronulla dawn-run brief for right now.\n\nTone/personality:\n- Energetic, spicy, playful, motivating.\n- Keep it sharp and concise.\n- Telegram-friendly.\n\nOutput format (strict):\n- Start with one short greeting line: \"Morning Keiran! Here's your Cronulla beach dawn-run intel:\"\n- Then output bullet lines in exactly this order and label style, with one emoji per line:\n  • 🧭 HEADLINE:\n  • 🌤️ WEATHER:\n  • 💧 HUMIDITY:\n  • 🌅 SUNRISE:\n  • 🌧️ RAIN RISK:\n  • 🌡️ TEMP (NEXT 2H):\n  • 💨 WIND (NEXT 2H):\n  • 🌊 TIDE:\n  • 📌 CONFIDENCE:\n\nRating system for HEADLINE:\n- ✅✅✅ = amazing run conditions\n- ✅✅ = decent / good enough\n- ✅ = marginal / caution\n- ❌ = poor / likely skip\n\nScoring priorities (most to least important):\n1) Rain risk in next 2 hours (deal-killer)\n2) Tide status (lower is better; approaching low tide = positive)\n3) Wind in next 2h (sustained + gusts; above 20 km/h unpleasant)\n\nDeterministic decision rules (must follow):\n1) If next-2h rain chance >= 40% OR explicit showers likely in next 2h => HEADLINE must be ❌.\n2) Else if rain chance 15-39% => maximum HEADLINE is ✅ (never ✅✅ or ✅✅✅).\n3) Else (rain chance < 15%):\n   - If tide is dropping to low within next 3h AND sustained wind <= 18 km/h AND gust <= 28 km/h => ✅✅✅.\n   - Else if sustained wind <= 22 km/h AND gust <= 32 km/h => ✅✅.\n   - Else => ✅.\n4) Never output ❌ when rain chance < 15% unless severe wind > 35 km/h gusts.\n\nConsistency guardrail:\n- If values are close to threshold (within ±3% rain or ±2 km/h wind/gust), reduce confidence and avoid overconfident wording.\n\nField requirements:\n- WEATHER: concise condition summary only.\n- HUMIDITY: current humidity percentage right now at the report instant.\n- SUNRISE: local sunrise time for Cronulla today.\n- RAIN RISK: explicit next-2h risk statement INCLUDING numeric probability % range.\n- TEMP (NEXT 2H): temperature range expected over the next 2 hours.\n- WIND (NEXT 2H): direction + sustained wind range over next 2 hours + gust speed.\n- TIDE: no percentages. Use simple directional phrasing with next low/high and last opposite tide time.\n- CONFIDENCE: one of High / Medium / Low with 3-6 words explaining uncertainty driver.\n\nWIND line format is mandatory:\n- \"• 💨 WIND (NEXT 2H): <DIR> <SUSTAINED_MIN>-<SUSTAINED_MAX> km/h, gusting to <GUST> km/h\"\n- Never output N/A for gusts. If missing, estimate conservatively and output numeric km/h.\n\nTIDE line format is mandatory:\n- \"• 🌊 TIDE: currently dropping to low at <TIME> (last high tide was at <TIME>)\"\nOR\n- \"• 🌊 TIDE: currently rising to high at <TIME> (last low tide was at <TIME>)\"\n\nDo not include tide percentages.\nDo not add extra sections or paragraphs. Use current local weather + marine/tide data for Cronulla where available."
       },
       "delivery": {
         "mode": "announce",
@@ -69,10 +69,10 @@
         "accountId": "keiran"
       },
       "state": {
-        "nextRunAtMs": 1772993700000,
-        "lastRunAtMs": 1772734500010,
+        "nextRunAtMs": 1773080100000,
+        "lastRunAtMs": 1772993700008,
         "lastStatus": "ok",
-        "lastDurationMs": 76593,
+        "lastDurationMs": 61163,
         "consecutiveErrors": 0,
         "lastRunStatus": "ok",
         "lastDelivered": true,
