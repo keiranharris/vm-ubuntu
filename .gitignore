@@ -37,3 +37,5 @@
 # exclude databases and backups inside openclaw
 /home/keiran/.openclaw/**/*.sqlite
 /home/keiran/.openclaw/**/*.sqlite.*
+
+
