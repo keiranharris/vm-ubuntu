@@ -13,4 +13,5 @@ if [[ ! -x "$SCRIPT" ]]; then
   exit 3
 fi
 
-exec "$SCRIPT"
+# Explicit label for interactive/trigger-driven pushes.
+exec "$SCRIPT" "TRIGGER-DRIVEN push"
