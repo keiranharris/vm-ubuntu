@@ -141,6 +141,15 @@ If a tool/action errors, the next user-facing message must include:
 
 Do not leave the user to infer recovery status from logs.
 
+### OpenClaw upgrade handler
+
+When Keiran replies exactly `yes upgrade` (or clear equivalent after an update prompt):
+1) Run `/home/keiran/.openclaw/run-openclaw-upgrade.sh`
+2) Confirm resulting running version
+3) Report completion in chat (script also sends Telegram confirmation)
+
+Do this without extra clarification unless safety/risk is unclear.
+
 **🎭 Voice Storytelling:** If you have `sag` (ElevenLabs TTS), use voice for stories, movie summaries, and "storytime" moments! Way more engaging than walls of text. Surprise people with funny voices.
 
 **📝 Platform Formatting:**
