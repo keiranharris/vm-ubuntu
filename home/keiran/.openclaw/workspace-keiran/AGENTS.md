@@ -132,6 +132,15 @@ Treat these as major state changes:
 
 Do this automatically (no prompt needed) unless the user asks not to push.
 
+### Error handling policy (user-facing)
+
+If a tool/action errors, the next user-facing message must include:
+1) What went wrong (plain language)
+2) Whether it was fixed
+3) Exactly how it was fixed (or what is still needed)
+
+Do not leave the user to infer recovery status from logs.
+
 **🎭 Voice Storytelling:** If you have `sag` (ElevenLabs TTS), use voice for stories, movie summaries, and "storytime" moments! Way more engaging than walls of text. Surprise people with funny voices.
 
 **📝 Platform Formatting:**
