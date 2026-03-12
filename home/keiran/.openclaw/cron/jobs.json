@@ -8,7 +8,7 @@
       "enabled": true,
       "notify": true,
       "createdAtMs": 1771274465711,
-      "updatedAtMs": 1773171180054,
+      "updatedAtMs": 1773257555832,
       "schedule": {
         "kind": "cron",
         "expr": "30 6 * * *",
@@ -30,14 +30,14 @@
         "accountId": "keiran"
       },
       "state": {
-        "nextRunAtMs": 1773257400000,
-        "lastRunAtMs": 1773171000012,
-        "lastStatus": "error",
-        "lastDurationMs": 180042,
-        "consecutiveErrors": 1,
-        "lastRunStatus": "error",
-        "lastDeliveryStatus": "unknown",
-        "lastError": "cron: job execution timed out"
+        "nextRunAtMs": 1773343800000,
+        "lastRunAtMs": 1773257400013,
+        "lastStatus": "ok",
+        "lastDurationMs": 155819,
+        "consecutiveErrors": 0,
+        "lastRunStatus": "ok",
+        "lastDeliveryStatus": "delivered",
+        "lastDelivered": true
       }
     },
     {
@@ -47,7 +47,7 @@
       "enabled": true,
       "notify": true,
       "createdAtMs": 1771872896982,
-      "updatedAtMs": 1773166547271,
+      "updatedAtMs": 1773252980776,
       "schedule": {
         "kind": "cron",
         "expr": "15 5 * * 1-5",
@@ -69,10 +69,10 @@
         "accountId": "keiran"
       },
       "state": {
-        "nextRunAtMs": 1773252900000,
-        "lastRunAtMs": 1773166500014,
+        "nextRunAtMs": 1773339300000,
+        "lastRunAtMs": 1773252900014,
         "lastStatus": "ok",
-        "lastDurationMs": 47257,
+        "lastDurationMs": 80762,
         "consecutiveErrors": 0,
         "lastRunStatus": "ok",
         "lastDelivered": true,
