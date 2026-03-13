@@ -23,15 +23,6 @@
         "primary": "openai-codex/gpt-5.3-codex",
         "fallbacks": []
       },
-      "models": {
-        "anthropic/claude-sonnet-4-5": {
-          "alias": "sonnet"
-        },
-        "anthropic/claude-haiku-4-5": {
-          "alias": "haiku"
-        },
-        "openai-codex/gpt-5.3-codex": {}
-      },
       "workspace": "/home/keiran/.openclaw/workspace-keiran",
       "compaction": {
         "mode": "safeguard"
@@ -61,7 +52,7 @@
         "identity": {
           "name": "Spark",
           "theme": "Personal AI operator",
-          "emoji": "⚡",
+          "emoji": "\u26a1",
           "avatar": "avatars/spark.png"
         }
       },
@@ -77,7 +68,7 @@
         "identity": {
           "name": "Clover",
           "theme": "Household AI companion",
-          "emoji": "🍀",
+          "emoji": "\ud83c\udf40",
           "avatar": "avatars/clover.png"
         }
       }
