@@ -1,13 +1,16 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-OPENCLAW_BIN="openclaw"
+PATH="/home/keiran/.npm-global/bin:/usr/local/bin:/usr/bin:/bin"
+OPENCLAW_BIN="/home/keiran/.npm-global/bin/openclaw"
+NPM_BIN="/usr/bin/npm"
+CURL_BIN="/usr/bin/curl"
 STATE_FILE="/home/keiran/.openclaw/update-watch.json"
 CHAT_ID="1826567098"
 ACCOUNT_ID="keiran"
 
 current="$($OPENCLAW_BIN --version 2>/dev/null || echo unknown)"
-latest="$(npm view openclaw version 2>/dev/null || echo unknown)"
+latest="$($NPM_BIN view openclaw version 2>/dev/null || echo unknown)"
 force="${FORCE_NOTIFY:-0}"
 
 if [[ -z "$current" || -z "$latest" || "$current" == "unknown" || "$latest" == "unknown" ]]; then
@@ -40,9 +43,9 @@ if [[ "$should_notify" == "1" ]]; then
   rel2="https://github.com/openclaw/openclaw/releases/tag/${latest}"
   rel3="https://github.com/openclaw/openclaw/releases"
 
-  body="$(curl -fsSL "https://api.github.com/repos/openclaw/openclaw/releases/tags/v${latest}" 2>/dev/null || true)"
+  body="$($CURL_BIN -fsSL "https://api.github.com/repos/openclaw/openclaw/releases/tags/v${latest}" 2>/dev/null || true)"
   if [[ -z "$body" ]]; then
-    body="$(curl -fsSL "https://api.github.com/repos/openclaw/openclaw/releases/tags/${latest}" 2>/dev/null || true)"
+    body="$($CURL_BIN -fsSL "https://api.github.com/repos/openclaw/openclaw/releases/tags/${latest}" 2>/dev/null || true)"
   fi
 
   summary=""
@@ -90,7 +93,7 @@ if os.path.exists(p):
         with open(p) as f: d=json.load(f)
     except Exception:
         d={}
-latest=subprocess.getoutput('npm view openclaw version 2>/dev/null').strip()
+latest=subprocess.getoutput('/usr/bin/npm view openclaw version 2>/dev/null').strip()
 if latest:
     d['lastPromptedVersion']=latest
 with open(p,'w') as f: json.dump(d,f,indent=2)

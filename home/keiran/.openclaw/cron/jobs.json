@@ -8,7 +8,7 @@
       "enabled": true,
       "notify": true,
       "createdAtMs": 1771274465711,
-      "updatedAtMs": 1773257555832,
+      "updatedAtMs": 1773343897250,
       "schedule": {
         "kind": "cron",
         "expr": "30 6 * * *",
@@ -30,10 +30,10 @@
         "accountId": "keiran"
       },
       "state": {
-        "nextRunAtMs": 1773343800000,
-        "lastRunAtMs": 1773257400013,
+        "nextRunAtMs": 1773430200000,
+        "lastRunAtMs": 1773343800012,
         "lastStatus": "ok",
-        "lastDurationMs": 155819,
+        "lastDurationMs": 97238,
         "consecutiveErrors": 0,
         "lastRunStatus": "ok",
         "lastDeliveryStatus": "delivered",
@@ -47,7 +47,7 @@
       "enabled": true,
       "notify": true,
       "createdAtMs": 1771872896982,
-      "updatedAtMs": 1773252980776,
+      "updatedAtMs": 1773339357809,
       "schedule": {
         "kind": "cron",
         "expr": "15 5 * * 1-5",
@@ -69,10 +69,10 @@
         "accountId": "keiran"
       },
       "state": {
-        "nextRunAtMs": 1773339300000,
-        "lastRunAtMs": 1773252900014,
+        "nextRunAtMs": 1773598500000,
+        "lastRunAtMs": 1773339300012,
         "lastStatus": "ok",
-        "lastDurationMs": 80762,
+        "lastDurationMs": 57797,
         "consecutiveErrors": 0,
         "lastRunStatus": "ok",
         "lastDelivered": true,
