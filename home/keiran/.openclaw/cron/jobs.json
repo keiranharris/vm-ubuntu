@@ -8,7 +8,7 @@
       "enabled": true,
       "notify": true,
       "createdAtMs": 1771274465711,
-      "updatedAtMs": 1773343897250,
+      "updatedAtMs": 1773430359364,
       "schedule": {
         "kind": "cron",
         "expr": "30 6 * * *",
@@ -30,10 +30,10 @@
         "accountId": "keiran"
       },
       "state": {
-        "nextRunAtMs": 1773430200000,
-        "lastRunAtMs": 1773343800012,
+        "nextRunAtMs": 1773516600000,
+        "lastRunAtMs": 1773430200058,
         "lastStatus": "ok",
-        "lastDurationMs": 97238,
+        "lastDurationMs": 159306,
         "consecutiveErrors": 0,
         "lastRunStatus": "ok",
         "lastDeliveryStatus": "delivered",
