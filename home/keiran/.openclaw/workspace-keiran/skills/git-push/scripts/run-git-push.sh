@@ -13,5 +13,9 @@ if [[ ! -x "$SCRIPT" ]]; then
   exit 3
 fi
 
-# Explicit label for interactive/trigger-driven pushes.
-exec "$SCRIPT" "TRIGGER-DRIVEN push"
+# Optional short reason from CLI args (max 10 words for inbox readability).
+RAW_REASON="${*:-general config updates}"
+SHORT_REASON="$(echo "$RAW_REASON" | awk '{for(i=1;i<=NF && i<=10;i++) printf "%s%s",$i,(i<10&&i<NF?" ":"")}')"
+LABEL="TRIGGER-DRIVEN (${SHORT_REASON})"
+
+exec "$SCRIPT" "$LABEL"

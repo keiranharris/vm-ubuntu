@@ -21,8 +21,11 @@ Run a deterministic host script for git add/commit/push rather than ad-hoc git c
 # Existence + permissions
 ls -l /home/keiran/_K/_CODE/k-git-push.sh
 
-# Execute
+# Nightly/default label
 /home/keiran/_K/_CODE/k-git-push.sh
+
+# Trigger-driven label with short reason (recommended)
+/home/keiran/.openclaw/workspace-keiran/skills/git-push/scripts/run-git-push.sh "update checker cron path fix"
 ```
 
 ## Guardrails
