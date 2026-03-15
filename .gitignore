@@ -40,4 +40,5 @@
 # noisy runtime state files (low learning value)
 /home/keiran/.openclaw/devices/paired.json
 /home/keiran/.openclaw/telegram/update-offset-keiran.json
+/home/keiran/.openclaw/telegram/update-offset-*.json
 
