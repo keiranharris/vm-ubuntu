@@ -8,7 +8,7 @@
       "enabled": true,
       "notify": true,
       "createdAtMs": 1771274465711,
-      "updatedAtMs": 1773516780081,
+      "updatedAtMs": 1773603158519,
       "schedule": {
         "kind": "cron",
         "expr": "30 6 * * *",
@@ -18,7 +18,7 @@
       "wakeMode": "now",
       "payload": {
         "kind": "agentTurn",
-        "message": "Generate Keiran's daily morning investment brief for Telegram.\n\nFocus areas (priority order):\n1) Weekend weather: Sydney forecast for upcoming Saturday + Sunday (very brief).\n2) Top AI/Tech News: Top 3 headlines in last 24h.\n3) Portfolio watchlist: NVDA, MSFT, GOOGL, TSM, TSLA, AAPL, and MU (Micron).\n4) Crypto: ETH/SOL/BNB quick move summary.\n5) Macro + FX: STRICTLY keep this to 2-3 sentences total (not paragraphs). Only include the most decision-relevant updates for USD/AUD-exposed investors.\n\nImportant portfolio context:\n- Keiran recently added MU (Micron) due to AI memory supply-chain importance and current memory-market tightness.\n- Portfolio is heavily weighted to US blue chips (especially NVDA), with smaller crypto exposure.\n- Emphasize what changed since yesterday and what may matter today.\n\nFormatting rules (strict):\n- Telegram-friendly, concise, high-signal.\n- Main section headings must be:\n  1) on their own line\n  2) bold\n  3) NOT bullets\n  4) preceded by one blank line\n  5) include one leading emoji for visual scan\n- Under each heading, use bullet points only for content lines.\n- Keep total length compact.\n\nUse this exact structure:\nMorning brief — <DAY DATE, TIME Sydney>\n\n🌦️ **Weekend weather (Sydney):**\n• ...\n• ...\n\n🤖 **Top AI/Tech News:**\n• ...\n• ...\n• ...\n\n📈 **Blue-Chip / FIAT Stocks:**\n• ...\n• ...\n• ...\n• ...\n• ...\n• ...\n• ...\n\n₿ **Crypto (24h):**\n• ...\n• ...\n• ...\n• Overall: ...\n\n🌍 **Macro + FX:**\n• ...\n• ...\n• ...\n\nUse web search for current data.",
+        "message": "Generate Keiran's daily morning investment brief for Telegram.\n\nFocus areas (priority order):\n1) Weekend weather: Sydney forecast for upcoming Saturday + Sunday (very brief).\n2) Top AI/Tech News: Top 3 headlines in last 24h.\n3) Portfolio watchlist: NVDA, MSFT, GOOGL, TSM, TSLA, AAPL, and MU (Micron).\n4) Crypto: ETH/SOL/BNB quick move summary.\n5) Macro + FX: STRICTLY keep this to 2-3 sentences total (not paragraphs). Only include the most decision-relevant updates for USD/AUD-exposed investors.\n\nImportant portfolio context:\n- Portfolio update (latest): MSFT and TSLA positions are now exited (treat as zero-weight / watch-only unless Keiran says otherwise).\n- MU and NVDA are now by far the largest portfolio slices and should receive the strongest focus in analysis.\n- Keep GOOGL, AAPL, and TSM as secondary blue-chip watchlist items.\n- Crypto is still smaller than blue-chip exposure overall.\n- Emphasize what changed since yesterday and what matters most for MU + NVDA first.\n\nFormatting rules (strict):\n- Telegram-friendly, concise, high-signal.\n- Main section headings must be:\n  1) on their own line\n  2) bold\n  3) NOT bullets\n  4) preceded by one blank line\n  5) include one leading emoji for visual scan\n- Under each heading, use bullet points only for content lines.\n- Keep total length compact.\n\nUse this exact structure:\nMorning brief \u2014 <DAY DATE, TIME Sydney>\n\n\ud83c\udf26\ufe0f **Weekend weather (Sydney):**\n\u2022 ...\n\u2022 ...\n\n\ud83e\udd16 **Top AI/Tech News:**\n\u2022 ...\n\u2022 ...\n\u2022 ...\n\n\ud83d\udcc8 **Blue-Chip / FIAT Stocks:**\n\u2022 ...\n\u2022 ...\n\u2022 ...\n\u2022 ...\n\u2022 ...\n\u2022 ...\n\u2022 ...\n\n\u20bf **Crypto (24h):**\n\u2022 ...\n\u2022 ...\n\u2022 ...\n\u2022 Overall: ...\n\n\ud83c\udf0d **Macro + FX:**\n\u2022 ...\n\u2022 ...\n\u2022 ...\n\nUse web search for current data.",
         "timeoutSeconds": 180,
         "model": "openai-codex/gpt-5.3-codex"
       },
@@ -30,15 +30,14 @@
         "accountId": "keiran"
       },
       "state": {
-        "nextRunAtMs": 1773603000000,
-        "lastRunAtMs": 1773516600047,
-        "lastStatus": "error",
-        "lastDurationMs": 180034,
-        "consecutiveErrors": 1,
-        "lastRunStatus": "error",
-        "lastDeliveryStatus": "unknown",
-        "lastError": "cron: job execution timed out",
-        "lastErrorReason": "timeout"
+        "nextRunAtMs": 1773689400000,
+        "lastRunAtMs": 1773603000046,
+        "lastStatus": "ok",
+        "lastDurationMs": 158473,
+        "consecutiveErrors": 0,
+        "lastRunStatus": "ok",
+        "lastDeliveryStatus": "delivered",
+        "lastDelivered": true
       }
     },
     {
@@ -48,7 +47,7 @@
       "enabled": true,
       "notify": true,
       "createdAtMs": 1771872896982,
-      "updatedAtMs": 1773339357809,
+      "updatedAtMs": 1773598546145,
       "schedule": {
         "kind": "cron",
         "expr": "15 5 * * 1-5",
@@ -60,7 +59,7 @@
         "kind": "agentTurn",
         "model": "openai-codex/gpt-5.3-codex",
         "timeoutSeconds": 120,
-        "message": "Generate Keiran’s daily Cronulla dawn-run brief for right now.\n\nTone/personality:\n- Energetic, spicy, playful, motivating.\n- Keep it sharp and concise.\n- Telegram-friendly.\n\nOutput format (strict):\n- Start with one short greeting line: \"Morning Keiran! Here's your Cronulla beach dawn-run intel:\"\n- Then output bullet lines in exactly this order and label style, with one emoji per line:\n  • 🧭 HEADLINE:\n  • 🌤️ WEATHER:\n  • 💧 HUMIDITY:\n  • 🌅 SUNRISE:\n  • 🌧️ RAIN RISK:\n  • 🌡️ TEMP (NEXT 2H):\n  • 💨 WIND (NEXT 2H):\n  • 🌊 TIDE:\n  • 📌 CONFIDENCE:\n\nRating system for HEADLINE:\n- ✅✅✅ = amazing run conditions\n- ✅✅ = decent / good enough\n- ✅ = marginal / caution\n- ❌ = poor / likely skip\n\nScoring priorities (most to least important):\n1) Rain risk in next 2 hours (deal-killer)\n2) Tide status (lower is better; approaching low tide = positive)\n3) Wind in next 2h (sustained + gusts; above 20 km/h unpleasant)\n\nDeterministic decision rules (must follow):\n1) If next-2h rain chance >= 40% OR explicit showers likely in next 2h => HEADLINE must be ❌.\n2) Else if rain chance 15-39% => maximum HEADLINE is ✅ (never ✅✅ or ✅✅✅).\n3) Else (rain chance < 15%):\n   - If tide is dropping to low within next 3h AND sustained wind <= 18 km/h AND gust <= 28 km/h => ✅✅✅.\n   - Else if sustained wind <= 22 km/h AND gust <= 32 km/h => ✅✅.\n   - Else => ✅.\n4) Never output ❌ when rain chance < 15% unless severe wind > 35 km/h gusts.\n\nConsistency guardrail:\n- If values are close to threshold (within ±3% rain or ±2 km/h wind/gust), reduce confidence and avoid overconfident wording.\n\nField requirements:\n- WEATHER: concise condition summary only.\n- HUMIDITY: current humidity percentage right now at the report instant.\n- SUNRISE: local sunrise time for Cronulla today.\n- RAIN RISK: explicit next-2h risk statement INCLUDING numeric probability % range.\n- TEMP (NEXT 2H): temperature range expected over the next 2 hours.\n- WIND (NEXT 2H): direction + sustained wind range over next 2 hours + gust speed.\n- TIDE: no percentages. Use simple directional phrasing with next low/high and last opposite tide time.\n- CONFIDENCE: one of High / Medium / Low with 3-6 words explaining uncertainty driver.\n\nWIND line format is mandatory:\n- \"• 💨 WIND (NEXT 2H): <DIR> <SUSTAINED_MIN>-<SUSTAINED_MAX> km/h, gusting to <GUST> km/h\"\n- Never output N/A for gusts. If missing, estimate conservatively and output numeric km/h.\n\nTIDE line format is mandatory:\n- \"• 🌊 TIDE: currently dropping to low at <TIME> (last high tide was at <TIME>)\"\nOR\n- \"• 🌊 TIDE: currently rising to high at <TIME> (last low tide was at <TIME>)\"\n\nDo not include tide percentages.\nDo not add extra sections or paragraphs. Use current local weather + marine/tide data for Cronulla where available."
+        "message": "Generate Keiran\u2019s daily Cronulla dawn-run brief for right now.\n\nTone/personality:\n- Energetic, spicy, playful, motivating.\n- Keep it sharp and concise.\n- Telegram-friendly.\n\nOutput format (strict):\n- Start with one short greeting line: \"Morning Keiran! Here's your Cronulla beach dawn-run intel:\"\n- Then output bullet lines in exactly this order and label style, with one emoji per line:\n  \u2022 \ud83e\udded HEADLINE:\n  \u2022 \ud83c\udf24\ufe0f WEATHER:\n  \u2022 \ud83d\udca7 HUMIDITY:\n  \u2022 \ud83c\udf05 SUNRISE:\n  \u2022 \ud83c\udf27\ufe0f RAIN RISK:\n  \u2022 \ud83c\udf21\ufe0f TEMP (NEXT 2H):\n  \u2022 \ud83d\udca8 WIND (NEXT 2H):\n  \u2022 \ud83c\udf0a TIDE:\n  \u2022 \ud83d\udccc CONFIDENCE:\n\nRating system for HEADLINE:\n- \u2705\u2705\u2705 = amazing run conditions\n- \u2705\u2705 = decent / good enough\n- \u2705 = marginal / caution\n- \u274c = poor / likely skip\n\nScoring priorities (most to least important):\n1) Rain risk in next 2 hours (deal-killer)\n2) Tide status (lower is better; approaching low tide = positive)\n3) Wind in next 2h (sustained + gusts; above 20 km/h unpleasant)\n\nDeterministic decision rules (must follow):\n1) If next-2h rain chance >= 40% OR explicit showers likely in next 2h => HEADLINE must be \u274c.\n2) Else if rain chance 15-39% => maximum HEADLINE is \u2705 (never \u2705\u2705 or \u2705\u2705\u2705).\n3) Else (rain chance < 15%):\n   - If tide is dropping to low within next 3h AND sustained wind <= 18 km/h AND gust <= 28 km/h => \u2705\u2705\u2705.\n   - Else if sustained wind <= 22 km/h AND gust <= 32 km/h => \u2705\u2705.\n   - Else => \u2705.\n4) Never output \u274c when rain chance < 15% unless severe wind > 35 km/h gusts.\n\nConsistency guardrail:\n- If values are close to threshold (within \u00b13% rain or \u00b12 km/h wind/gust), reduce confidence and avoid overconfident wording.\n\nField requirements:\n- WEATHER: concise condition summary only.\n- HUMIDITY: current humidity percentage right now at the report instant.\n- SUNRISE: local sunrise time for Cronulla today.\n- RAIN RISK: explicit next-2h risk statement INCLUDING numeric probability % range.\n- TEMP (NEXT 2H): temperature range expected over the next 2 hours.\n- WIND (NEXT 2H): direction + sustained wind range over next 2 hours + gust speed.\n- TIDE: no percentages. Use simple directional phrasing with next low/high and last opposite tide time.\n- CONFIDENCE: one of High / Medium / Low with 3-6 words explaining uncertainty driver.\n\nWIND line format is mandatory:\n- \"\u2022 \ud83d\udca8 WIND (NEXT 2H): <DIR> <SUSTAINED_MIN>-<SUSTAINED_MAX> km/h, gusting to <GUST> km/h\"\n- Never output N/A for gusts. If missing, estimate conservatively and output numeric km/h.\n\nTIDE line format is mandatory:\n- \"\u2022 \ud83c\udf0a TIDE: currently dropping to low at <TIME> (last high tide was at <TIME>)\"\nOR\n- \"\u2022 \ud83c\udf0a TIDE: currently rising to high at <TIME> (last low tide was at <TIME>)\"\n\nDo not include tide percentages.\nDo not add extra sections or paragraphs. Use current local weather + marine/tide data for Cronulla where available."
       },
       "delivery": {
         "mode": "announce",
@@ -70,10 +69,10 @@
         "accountId": "keiran"
       },
       "state": {
-        "nextRunAtMs": 1773598500000,
-        "lastRunAtMs": 1773339300012,
+        "nextRunAtMs": 1773684900000,
+        "lastRunAtMs": 1773598500053,
         "lastStatus": "ok",
-        "lastDurationMs": 57797,
+        "lastDurationMs": 46092,
         "consecutiveErrors": 0,
         "lastRunStatus": "ok",
         "lastDelivered": true,
