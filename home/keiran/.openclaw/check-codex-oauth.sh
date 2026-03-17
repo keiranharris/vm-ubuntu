@@ -1,21 +1,25 @@
 #!/usr/bin/env bash
-set -u
+set -euo pipefail
 
-OPENCLAW_BIN="openclaw"
+PATH="/home/keiran/.npm-global/bin:/usr/local/bin:/usr/bin:/bin"
+OPENCLAW_BIN="/home/keiran/.npm-global/bin/openclaw"
 CHAT_ID="1826567098"
 ACCOUNT_ID="keiran"
-
+LOG_DIR="/home/keiran/.openclaw/logs"
+mkdir -p "$LOG_DIR"
+LOG_FILE="$LOG_DIR/oauth-check.log"
 TMP_OUT="/tmp/openclaw-oauth-check.out"
 
-# 1) Try a tiny model turn using Keiran's codex OAuth.
-if "$OPENCLAW_BIN" agent --agent keiran --message "Reply with exactly: AUTH_OK" --timeout 45 --json >"$TMP_OUT" 2>&1; then
+stamp="$(date -Iseconds)"
+
+if "$OPENCLAW_BIN" agent --agent keiran --message "Reply with exactly: AUTH_OK" --timeout 60 --json >"$TMP_OUT" 2>&1; then
   if grep -q "AUTH_OK" "$TMP_OUT"; then
+    echo "$stamp ok" >> "$LOG_FILE"
     exit 0
   fi
 fi
 
-# 2) If failed (or malformed), notify via Telegram (does not require model auth).
-MSG="⚠️ Spark OAuth health-check failed at 5pm. Codex login likely expired; please re-auth on host before tomorrow morning cron runs."
+echo "$stamp fail" >> "$LOG_FILE"
+MSG="⚠️ Spark OAuth preflight failed. Codex login likely expired; please re-auth on host before scheduled reports."
 "$OPENCLAW_BIN" message send --channel telegram --account "$ACCOUNT_ID" --target "$CHAT_ID" --message "$MSG" >/dev/null 2>&1 || true
-
 exit 0

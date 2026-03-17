@@ -1,11 +1,11 @@
 {
   "meta": {
-    "lastTouchedVersion": "2026.2.26",
-    "lastTouchedAt": "2026-03-02T19:31:20.430Z"
+    "lastTouchedVersion": "2026.3.13",
+    "lastTouchedAt": "2026-03-17T10:28:01.630Z"
   },
   "wizard": {
-    "lastRunAt": "2026-02-17T09:03:28.272Z",
-    "lastRunVersion": "2026.2.15",
+    "lastRunAt": "2026-03-17T10:28:01.615Z",
+    "lastRunVersion": "2026.3.13",
     "lastRunCommand": "doctor",
     "lastRunMode": "local"
   },
@@ -52,7 +52,7 @@
         "identity": {
           "name": "Spark",
           "theme": "Personal AI operator",
-          "emoji": "\u26a1",
+          "emoji": "⚡",
           "avatar": "avatars/spark.png"
         }
       },
@@ -68,7 +68,7 @@
         "identity": {
           "name": "Clover",
           "theme": "Household AI companion",
-          "emoji": "\ud83c\udf40",
+          "emoji": "🍀",
           "avatar": "avatars/clover.png"
         }
       }
@@ -121,7 +121,6 @@
       "enabled": true,
       "dmPolicy": "pairing",
       "groupPolicy": "allowlist",
-      "streaming": "off",
       "network": {
         "autoSelectFamily": false
       },
@@ -141,8 +140,14 @@
           "botToken": "8262488202:AAFMlciKlvrjdG0nzku-QSKMM3fLQny7AY0",
           "groupPolicy": "allowlist",
           "streaming": "off"
+        },
+        "default": {
+          "dmPolicy": "pairing",
+          "groupPolicy": "allowlist",
+          "streaming": "off"
         }
-      }
+      },
+      "streaming": "partial"
     }
   },
   "gateway": {
