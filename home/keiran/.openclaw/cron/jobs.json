@@ -8,7 +8,7 @@
       "enabled": true,
       "notify": true,
       "createdAtMs": 1771274465711,
-      "updatedAtMs": 1773862380086,
+      "updatedAtMs": 1773976821345,
       "schedule": {
         "kind": "cron",
         "expr": "30 6 * * *",
@@ -19,7 +19,7 @@
       "payload": {
         "kind": "agentTurn",
         "message": "Generate Keiran's daily morning investment brief for Telegram.\n\nFocus areas (priority order):\n1) Weekend weather: Sydney forecast for upcoming Saturday + Sunday (very brief).\n2) Top AI/Tech News: Top 3 headlines in last 24h.\n3) Portfolio watchlist: NVDA, MSFT, GOOGL, TSM, TSLA, AAPL, and MU (Micron).\n4) Crypto: ETH/SOL/BNB quick move summary.\n5) Macro + FX: STRICTLY keep this to 2-3 sentences total (not paragraphs). Only include the most decision-relevant updates for USD/AUD-exposed investors.\n\nImportant portfolio context:\n- Portfolio update (latest): MSFT and TSLA positions are now exited (treat as zero-weight / watch-only unless Keiran says otherwise).\n- MU and NVDA are now by far the largest portfolio slices and should receive the strongest focus in analysis.\n- Keep GOOGL, AAPL, and TSM as secondary blue-chip watchlist items.\n- Crypto is still smaller than blue-chip exposure overall.\n- Emphasize what changed since yesterday and what matters most for MU + NVDA first.\n\nFormatting rules (strict):\n- Telegram-friendly, concise, high-signal.\n- Main section headings must be:\n  1) on their own line\n  2) bold\n  3) NOT bullets\n  4) preceded by one blank line\n  5) include one leading emoji for visual scan\n- Under each heading, use bullet points only for content lines.\n- Keep total length compact.\n\nUse this exact structure:\nMorning brief — <DAY DATE, TIME Sydney>\n\n🌦️ **Weekend weather (Sydney):**\n• ...\n• ...\n\n🤖 **Top AI/Tech News:**\n• ...\n• ...\n• ...\n\n📈 **Blue-Chip / FIAT Stocks:**\n• ...\n• ...\n• ...\n• ...\n• ...\n• ...\n• ...\n\n₿ **Crypto (24h):**\n• ...\n• ...\n• ...\n• Overall: ...\n\n🌍 **Macro + FX:**\n• ...\n• ...\n• ...\n\nUse web search for current data.",
-        "timeoutSeconds": 180,
+        "timeoutSeconds": 420,
         "model": "openai-codex/gpt-5.3-codex"
       },
       "delivery": {
@@ -30,15 +30,21 @@
         "accountId": "keiran"
       },
       "state": {
-        "nextRunAtMs": 1773948600000,
-        "lastRunAtMs": 1773862200042,
+        "nextRunAtMs": 1774035000000,
+        "lastRunAtMs": 1773948600036,
         "lastStatus": "error",
-        "lastDurationMs": 180044,
-        "consecutiveErrors": 3,
+        "lastDurationMs": 180039,
+        "consecutiveErrors": 4,
         "lastRunStatus": "error",
         "lastDeliveryStatus": "unknown",
         "lastErrorReason": "timeout",
         "lastError": "cron: job execution timed out"
+      },
+      "failureAlert": {
+        "after": 1,
+        "channel": "telegram",
+        "to": "1826567098",
+        "accountId": "keiran"
       }
     },
     {
@@ -48,7 +54,7 @@
       "enabled": true,
       "notify": true,
       "createdAtMs": 1771872896982,
-      "updatedAtMs": 1773857784807,
+      "updatedAtMs": 1773944183250,
       "schedule": {
         "kind": "cron",
         "expr": "15 5 * * 1-5",
@@ -70,10 +76,10 @@
         "accountId": "keiran"
       },
       "state": {
-        "nextRunAtMs": 1773944100000,
-        "lastRunAtMs": 1773857700045,
+        "nextRunAtMs": 1774203300000,
+        "lastRunAtMs": 1773944100041,
         "lastStatus": "ok",
-        "lastDurationMs": 84762,
+        "lastDurationMs": 83209,
         "consecutiveErrors": 0,
         "lastRunStatus": "ok",
         "lastDelivered": true,
