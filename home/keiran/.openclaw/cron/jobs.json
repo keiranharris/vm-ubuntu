@@ -8,7 +8,7 @@
       "enabled": true,
       "notify": true,
       "createdAtMs": 1771274465711,
-      "updatedAtMs": 1773976821345,
+      "updatedAtMs": 1774035074565,
       "schedule": {
         "kind": "cron",
         "expr": "30 6 * * *",
@@ -30,15 +30,14 @@
         "accountId": "keiran"
       },
       "state": {
-        "nextRunAtMs": 1774035000000,
-        "lastRunAtMs": 1773948600036,
-        "lastStatus": "error",
-        "lastDurationMs": 180039,
-        "consecutiveErrors": 4,
-        "lastRunStatus": "error",
-        "lastDeliveryStatus": "unknown",
-        "lastErrorReason": "timeout",
-        "lastError": "cron: job execution timed out"
+        "nextRunAtMs": 1774121400000,
+        "lastRunAtMs": 1774035000050,
+        "lastStatus": "ok",
+        "lastDurationMs": 74515,
+        "consecutiveErrors": 0,
+        "lastRunStatus": "ok",
+        "lastDeliveryStatus": "delivered",
+        "lastDelivered": true
       },
       "failureAlert": {
         "after": 1,
