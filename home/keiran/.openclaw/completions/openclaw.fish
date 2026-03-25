@@ -45,6 +45,7 @@ complete -c openclaw -n "__fish_use_subcommand" -a "secrets" -d 'Secrets runtime
 complete -c openclaw -n "__fish_use_subcommand" -a "skills" -d 'List and inspect available skills'
 complete -c openclaw -n "__fish_use_subcommand" -a "update" -d 'Update OpenClaw and inspect update channel status'
 complete -c openclaw -n "__fish_use_subcommand" -s V -l version -d 'output the version number'
+complete -c openclaw -n "__fish_use_subcommand" -l container -d 'Run the CLI inside a running Podman/Docker container named <name> (default: env OPENCLAW_CONTAINER)'
 complete -c openclaw -n "__fish_use_subcommand" -l dev -d 'Dev profile: isolate state under ~/.openclaw-dev, default gateway port 19001, and shift derived ports (browser/canvas)'
 complete -c openclaw -n "__fish_use_subcommand" -l profile -d 'Use a named profile (isolates OPENCLAW_STATE_DIR/OPENCLAW_CONFIG_PATH under ~/.openclaw-<name>)'
 complete -c openclaw -n "__fish_use_subcommand" -l log-level -d 'Global log level override for file + console (silent|fatal|error|warn|info|debug|trace)'

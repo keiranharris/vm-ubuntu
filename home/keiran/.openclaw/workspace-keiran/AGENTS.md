@@ -144,9 +144,10 @@ Do not leave the user to infer recovery status from logs.
 ### OpenClaw upgrade handler
 
 When Keiran replies exactly `yes upgrade` (or clear equivalent after an update prompt):
-1) Run `/home/keiran/.openclaw/run-openclaw-upgrade.sh`
-2) Confirm resulting running version
-3) Report completion in chat (script also sends Telegram confirmation)
+1) Send immediate in-chat ack: "starting upgrade now"
+2) Run `/home/keiran/.openclaw/run-openclaw-upgrade.sh`
+3) Independently verify with `openclaw --version`, `npm view openclaw version`, and `openclaw status`
+4) Always send a final in-chat completion message with before/after version and health status (even if tool-stream glitches)
 
 Do this without extra clarification unless safety/risk is unclear.
 
