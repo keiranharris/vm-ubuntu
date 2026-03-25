@@ -8,9 +8,11 @@
       "scopes": [
         "operator.admin",
         "operator.approvals",
-        "operator.pairing"
+        "operator.pairing",
+        "operator.read",
+        "operator.write"
       ],
-      "updatedAtMs": 1774332006156
+      "updatedAtMs": 1774418405056
     }
   }
 }

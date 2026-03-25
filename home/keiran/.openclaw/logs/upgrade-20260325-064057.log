@@ -1,0 +1,47 @@
+[start] 2026-03-25T06:40:57+11:00
+before=OpenClaw 2026.3.13 (61d171a) latest=2026.3.23-2
+│
+◇  Doctor warnings ────────────────────────────────────────────────────────╮
+│                                                                          │
+│  - channels.telegram.groupPolicy is "allowlist" but groupAllowFrom (and  │
+│    allowFrom) is empty — all group messages will be silently dropped.    │
+│    Add sender IDs to channels.telegram.groupAllowFrom or                 │
+│    channels.telegram.allowFrom, or set groupPolicy to "open".            │
+│  - channels.telegram.accounts.marina.groupPolicy is "allowlist" but      │
+│    groupAllowFrom (and allowFrom) is empty — all group messages will be  │
+│    silently dropped. Add sender IDs to                                   │
+│    channels.telegram.accounts.marina.groupAllowFrom or                   │
+│    channels.telegram.accounts.marina.allowFrom, or set groupPolicy to    │
+│    "open".                                                               │
+│  - channels.telegram.accounts.keiran.groupPolicy is "allowlist" but      │
+│    groupAllowFrom (and allowFrom) is empty — all group messages will be  │
+│    silently dropped. Add sender IDs to                                   │
+│    channels.telegram.accounts.keiran.groupAllowFrom or                   │
+│    channels.telegram.accounts.keiran.allowFrom, or set groupPolicy to    │
+│    "open".                                                               │
+│  - channels.telegram.accounts.default.groupPolicy is "allowlist" but     │
+│    groupAllowFrom (and allowFrom) is empty — all group messages will be  │
+│    silently dropped. Add sender IDs to                                   │
+│    channels.telegram.accounts.default.groupAllowFrom or                  │
+│    channels.telegram.accounts.default.allowFrom, or set groupPolicy to   │
+│    "open".                                                               │
+│                                                                          │
+├──────────────────────────────────────────────────────────────────────────╯
+Updating OpenClaw...
+
+
+Update Result: OK
+  Root: /home/keiran/.npm-global/lib/node_modules/openclaw
+  Before: 2026.3.13
+  After: 2026.3.23-2
+
+Steps:
+  ✓ global update (25.21s)
+  ✓ openclaw doctor (7.06s)
+
+Total time: 32.48s
+
+Updating plugins...
+No plugin updates needed.
+
+Restarting service...
