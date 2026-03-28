@@ -29,7 +29,7 @@
       },
       "heartbeat": {
         "every": "2h",
-        "model": "ollama/llama3.2:3b",
+        "model": "openai-codex/gpt-5.3-codex",
         "session": "main",
         "target": "slack",
         "prompt": "Check: Any blockers, opportunities, or progress updates needed?"

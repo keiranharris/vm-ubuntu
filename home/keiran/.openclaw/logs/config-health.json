@@ -2,13 +2,13 @@
   "entries": {
     "/home/keiran/.openclaw/openclaw.json": {
       "lastKnownGood": {
-        "hash": "b55882a96407a0b218b18899fb53d27a619adc4a832323831d1eb14c73f35baa",
-        "bytes": 4171,
-        "mtimeMs": 1773743281631.2483,
-        "ctimeMs": 1773743281632.546,
+        "hash": "6edc2bfe8881bcb0d633a3f58c90242bb7d657570acbbeabe3f1c45ad6c2e733",
+        "bytes": 4179,
+        "mtimeMs": 1774735110035.5776,
+        "ctimeMs": 1774735110035.5776,
         "hasMeta": true,
         "gatewayMode": "local",
-        "observedAt": "2026-03-25T20:54:52.578Z"
+        "observedAt": "2026-03-28T21:58:30.601Z"
       },
       "lastObservedSuspiciousSignature": null
     }
