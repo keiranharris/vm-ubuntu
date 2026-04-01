@@ -1,0 +1,15 @@
+{
+  "id": "162616a9-566e-4bd2-95cb-f806cd5d2653",
+  "enqueuedAt": 1774985507054,
+  "channel": "telegram",
+  "to": "1826567098",
+  "accountId": "keiran",
+  "payloads": [
+    {
+      "text": "Cron job \"Daily Morning Brief\" failed 1 times\nLast error: Error: Outbound not configured for channel: telegram"
+    }
+  ],
+  "retryCount": 1,
+  "lastAttemptAt": 1774985507058,
+  "lastError": "Outbound not configured for channel: telegram"
+}

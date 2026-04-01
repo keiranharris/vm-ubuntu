@@ -8,7 +8,7 @@
       "enabled": true,
       "notify": true,
       "createdAtMs": 1771274465711,
-      "updatedAtMs": 1774899159757,
+      "updatedAtMs": 1774985507047,
       "schedule": {
         "kind": "cron",
         "expr": "30 6 * * *",
@@ -30,14 +30,15 @@
         "accountId": "keiran"
       },
       "state": {
-        "nextRunAtMs": 1774985400000,
-        "lastRunAtMs": 1774899000034,
-        "lastStatus": "ok",
-        "lastDurationMs": 159723,
-        "consecutiveErrors": 0,
-        "lastRunStatus": "ok",
-        "lastDeliveryStatus": "delivered",
-        "lastDelivered": true
+        "nextRunAtMs": 1775071800000,
+        "lastRunAtMs": 1774985400031,
+        "lastStatus": "error",
+        "lastDurationMs": 107016,
+        "consecutiveErrors": 1,
+        "lastRunStatus": "error",
+        "lastDeliveryStatus": "unknown",
+        "lastError": "Error: Outbound not configured for channel: telegram",
+        "lastFailureAlertAtMs": 1774985507048
       },
       "failureAlert": {
         "after": 1,
@@ -53,7 +54,7 @@
       "enabled": true,
       "notify": true,
       "createdAtMs": 1771872896982,
-      "updatedAtMs": 1774894582011,
+      "updatedAtMs": 1774980962365,
       "schedule": {
         "kind": "cron",
         "expr": "15 5 * * 1-5",
@@ -75,14 +76,14 @@
         "accountId": "keiran"
       },
       "state": {
-        "nextRunAtMs": 1774980900000,
-        "lastRunAtMs": 1774894500030,
-        "lastStatus": "ok",
-        "lastDurationMs": 81981,
-        "consecutiveErrors": 0,
-        "lastRunStatus": "ok",
-        "lastDelivered": true,
-        "lastDeliveryStatus": "delivered"
+        "nextRunAtMs": 1775067300000,
+        "lastRunAtMs": 1774980900048,
+        "lastStatus": "error",
+        "lastDurationMs": 62317,
+        "consecutiveErrors": 1,
+        "lastRunStatus": "error",
+        "lastDeliveryStatus": "unknown",
+        "lastError": "Error: Outbound not configured for channel: telegram"
       }
     }
   ]
