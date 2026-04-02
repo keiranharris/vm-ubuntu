@@ -1,0 +1,20 @@
+[start] 2026-04-02T20:51:13+11:00
+before=OpenClaw 2026.3.24 (cff6dc9) latest=2026.4.1
+Updating OpenClaw...
+
+
+Update Result: OK
+  Root: /home/keiran/.npm-global/lib/node_modules/openclaw
+  Before: 2026.3.24
+  After: 2026.4.1
+
+Steps:
+  ✓ global update (77.5s)
+  ✓ openclaw doctor (7.34s)
+
+Total time: 85.1s
+
+Updating plugins...
+No plugin updates needed.
+
+Restarting service...

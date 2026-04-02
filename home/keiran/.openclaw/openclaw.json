@@ -1,7 +1,7 @@
 {
   "meta": {
-    "lastTouchedVersion": "2026.3.13",
-    "lastTouchedAt": "2026-03-17T10:28:01.630Z"
+    "lastTouchedVersion": "2026.3.24",
+    "lastTouchedAt": "2026-04-01T18:58:27.017Z"
   },
   "wizard": {
     "lastRunAt": "2026-03-17T10:28:01.615Z",
@@ -78,7 +78,6 @@
     "web": {
       "search": {
         "enabled": true,
-        "apiKey": "BSAvm8JMSROs8DIwLO7YnwbZ_92epAi",
         "maxResults": 5,
         "timeoutSeconds": 30,
         "cacheTtlMinutes": 15
@@ -121,6 +120,7 @@
       "enabled": true,
       "dmPolicy": "pairing",
       "groupPolicy": "allowlist",
+      "streaming": "partial",
       "network": {
         "autoSelectFamily": false
       },
@@ -142,12 +142,12 @@
           "streaming": "off"
         },
         "default": {
+          "enabled": false,
           "dmPolicy": "pairing",
           "groupPolicy": "allowlist",
           "streaming": "off"
         }
-      },
-      "streaming": "partial"
+      }
     }
   },
   "gateway": {
@@ -177,6 +177,14 @@
     "entries": {
       "telegram": {
         "enabled": true
+      },
+      "brave": {
+        "enabled": true,
+        "config": {
+          "webSearch": {
+            "apiKey": "BSAvm8JMSROs8DIwLO7YnwbZ_92epAi"
+          }
+        }
       }
     }
   }
