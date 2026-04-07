@@ -1,7 +1,7 @@
 {
   "meta": {
-    "lastTouchedVersion": "2026.3.24",
-    "lastTouchedAt": "2026-04-01T18:58:27.017Z"
+    "lastTouchedVersion": "2026.4.5",
+    "lastTouchedAt": "2026-04-07T00:39:41.734Z"
   },
   "wizard": {
     "lastRunAt": "2026-03-17T10:28:01.615Z",
@@ -54,6 +54,13 @@
           "theme": "Personal AI operator",
           "emoji": "⚡",
           "avatar": "avatars/spark.png"
+        },
+        "tools": {
+          "exec": {
+            "host": "gateway",
+            "security": "full",
+            "ask": "off"
+          }
         }
       },
       {
@@ -85,6 +92,11 @@
       "fetch": {
         "enabled": true
       }
+    },
+    "exec": {
+      "host": "gateway",
+      "security": "allowlist",
+      "ask": "on-miss"
     }
   },
   "bindings": [
@@ -185,6 +197,9 @@
             "apiKey": "BSAvm8JMSROs8DIwLO7YnwbZ_92epAi"
           }
         }
+      },
+      "openai": {
+        "enabled": true
       }
     }
   }

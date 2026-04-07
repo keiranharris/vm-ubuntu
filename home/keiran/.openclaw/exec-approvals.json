@@ -2,8 +2,12 @@
   "version": 1,
   "socket": {
     "path": "/home/keiran/.openclaw/exec-approvals.sock",
-    "token": "qbziY02WXmFmQ1RomNyL8e0NoFuudVzC"
+    "token": "KQI8I-kv8kbg0Osi9tebQExJE_mLmwYN"
   },
-  "defaults": {},
+  "defaults": {
+    "security": "full",
+    "ask": "off",
+    "askFallback": "full"
+  },
   "agents": {}
 }
