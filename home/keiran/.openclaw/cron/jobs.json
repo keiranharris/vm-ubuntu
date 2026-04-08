@@ -8,7 +8,7 @@
       "enabled": true,
       "notify": true,
       "createdAtMs": 1771274465711,
-      "updatedAtMs": 1775507483180,
+      "updatedAtMs": 1775593813148,
       "schedule": {
         "kind": "cron",
         "expr": "30 6 * * *",
@@ -30,14 +30,16 @@
         "accountId": "keiran"
       },
       "state": {
-        "nextRunAtMs": 1775593800000,
-        "lastRunAtMs": 1775507400032,
-        "lastStatus": "ok",
-        "lastDurationMs": 83148,
-        "consecutiveErrors": 0,
-        "lastRunStatus": "ok",
-        "lastDeliveryStatus": "delivered",
-        "lastDelivered": true
+        "nextRunAtMs": 1775680200000,
+        "lastRunAtMs": 1775593800006,
+        "lastStatus": "error",
+        "lastDurationMs": 13142,
+        "consecutiveErrors": 1,
+        "lastRunStatus": "error",
+        "lastDeliveryStatus": "unknown",
+        "lastError": "FailoverError: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.",
+        "lastErrorReason": "auth",
+        "lastFailureAlertAtMs": 1775593813149
       },
       "failureAlert": {
         "after": 1,
@@ -53,7 +55,7 @@
       "enabled": true,
       "notify": true,
       "createdAtMs": 1771872896982,
-      "updatedAtMs": 1775502950709,
+      "updatedAtMs": 1775589313240,
       "schedule": {
         "kind": "cron",
         "expr": "15 5 * * 1-5",
@@ -75,14 +77,15 @@
         "accountId": "keiran"
       },
       "state": {
-        "nextRunAtMs": 1775589300000,
-        "lastRunAtMs": 1775502900029,
-        "lastStatus": "ok",
-        "lastDurationMs": 50680,
-        "consecutiveErrors": 0,
-        "lastRunStatus": "ok",
-        "lastDeliveryStatus": "delivered",
-        "lastDelivered": true
+        "nextRunAtMs": 1775675700000,
+        "lastRunAtMs": 1775589300008,
+        "lastStatus": "error",
+        "lastDurationMs": 13232,
+        "consecutiveErrors": 1,
+        "lastRunStatus": "error",
+        "lastDeliveryStatus": "unknown",
+        "lastError": "FailoverError: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.",
+        "lastErrorReason": "auth"
       }
     }
   ]
