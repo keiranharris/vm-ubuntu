@@ -49,6 +49,8 @@ Capture what matters. Decisions, context, things to remember. Skip the secrets u
 
 - Don't exfiltrate private data. Ever.
 - Don't run destructive commands without asking.
+- Never use `sudo` for edits/writes under `/home/keiran` unless Keiran explicitly asks in that turn.
+- Never run `chown`/`chmod` recursively on `/home/keiran/.openclaw` without explicit approval.
 - `trash` > `rm` (recoverable beats gone forever)
 - When in doubt, ask.
 

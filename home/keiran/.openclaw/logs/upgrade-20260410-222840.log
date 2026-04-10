@@ -1,0 +1,31 @@
+[start] 2026-04-10T22:28:41+10:00
+before=OpenClaw 2026.4.5 (3e72c03) latest=2026.4.9
+Updating OpenClaw...
+
+
+Update Result: OK
+  Root: /home/keiran/.npm-global/lib/node_modules/openclaw
+  Before: 2026.4.5
+  After: 2026.4.9
+
+Steps:
+  ✓ global update (118.85s)
+  ✓ openclaw doctor (9.97s)
+
+Total time: 129.09s
+
+Updating plugins...
+No plugin updates needed.
+Completion cache update failed ([openclaw] Failed to start CLI: Error: qa scenario pack not found: qa/scenarios/index.md
+    at readQaScenarioPack (file:///home/keiran/.npm-global/lib/node_modules/openclaw/dist/suite-BW4kSK9C.js:754:27)
+    at readQaScenarioById (file:///home/keiran/.npm-global/lib/node_modules/openclaw/dist/suite-BW4kSK9C.js:790:19)
+    at readQaScenarioExecutionConfig (file:///home/keiran/.npm-global/lib/node_modules/openclaw/dist/suite-BW4kSK9C.js:795:9)
+    at readRequiredDiscoveryRefs (file:///home/keiran/.npm-global/lib/node_modules/openclaw/dist/suite-BW4kSK9C.js:2834:9)
+    at file:///home/keiran/.npm-global/lib/node_modules/openclaw/dist/suite-BW4kSK9C.js:2840:39
+    at ModuleJob.run (node:internal/modules/esm/module_job:343:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:665:26)
+    at async Object.register (file:///home/keiran/.npm-global/lib/node_modules/openclaw/dist/register.subclis-D7AxmRi1.js:38:22)
+    at async registerCommandGroupByName (file:///home/keiran/.npm-global/lib/node_modules/openclaw/dist/register-command-groups-pnI4KWXM.js:91:2)
+    at async Command.<anonymous> (file:///home/keiran/.npm-global/lib/node_modules/openclaw/dist/completion-cli-klMIRvmG.js:169:4)).
+
+Restarting service...

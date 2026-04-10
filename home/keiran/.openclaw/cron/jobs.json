@@ -8,7 +8,7 @@
       "enabled": true,
       "notify": true,
       "createdAtMs": 1771274465711,
-      "updatedAtMs": 1775680213518,
+      "updatedAtMs": 1775766613171,
       "schedule": {
         "kind": "cron",
         "expr": "30 6 * * *",
@@ -30,15 +30,15 @@
         "accountId": "keiran"
       },
       "state": {
-        "nextRunAtMs": 1775766600000,
-        "lastRunAtMs": 1775680200009,
+        "nextRunAtMs": 1775853000000,
+        "lastRunAtMs": 1775766600008,
         "lastStatus": "error",
-        "lastDurationMs": 13509,
-        "consecutiveErrors": 2,
+        "lastDurationMs": 13163,
+        "consecutiveErrors": 3,
         "lastRunStatus": "error",
         "lastDeliveryStatus": "unknown",
         "lastErrorReason": "auth",
-        "lastFailureAlertAtMs": 1775680213519,
+        "lastFailureAlertAtMs": 1775766613172,
         "lastError": "FailoverError: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate."
       },
       "failureAlert": {
@@ -55,7 +55,7 @@
       "enabled": true,
       "notify": true,
       "createdAtMs": 1771872896982,
-      "updatedAtMs": 1775675713178,
+      "updatedAtMs": 1775762105919,
       "schedule": {
         "kind": "cron",
         "expr": "15 5 * * 1-5",
@@ -77,11 +77,11 @@
         "accountId": "keiran"
       },
       "state": {
-        "nextRunAtMs": 1775762100000,
-        "lastRunAtMs": 1775675700008,
+        "nextRunAtMs": 1776021300000,
+        "lastRunAtMs": 1775762100014,
         "lastStatus": "error",
-        "lastDurationMs": 13170,
-        "consecutiveErrors": 2,
+        "lastDurationMs": 5905,
+        "consecutiveErrors": 3,
         "lastRunStatus": "error",
         "lastDeliveryStatus": "unknown",
         "lastErrorReason": "auth",
