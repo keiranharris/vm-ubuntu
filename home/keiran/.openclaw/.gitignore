@@ -1,0 +1,26 @@
+# OpenClaw runtime state (ignore noisy/volatile files)
+
+# Runtime jobs/state DB sidecars
+cron/jobs.json
+tasks/*.sqlite-shm
+tasks/*.sqlite-wal
+flows/*.sqlite-shm
+flows/*.sqlite-wal
+
+# Runtime counters/checkpoint state
+update-watch.json
+update-check.json
+exec-approvals.json
+
+# Device/session volatile state
+devices/paired.json
+devices/pending.json
+identity/device-auth.json
+
+# Ephemeral command hash caches
+telegram/command-hash-*.txt
+
+# Generated logs/media
+logs/*.log
+logs/config-health.json
+media/inbound/*

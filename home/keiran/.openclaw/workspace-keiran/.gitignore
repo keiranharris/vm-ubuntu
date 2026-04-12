@@ -1,0 +1,3 @@
+# Workspace runtime state (not config)
+.openclaw/workspace-state.json
+memory/.dreams/short-term-recall.json
