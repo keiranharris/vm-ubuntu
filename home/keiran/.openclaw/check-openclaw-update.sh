@@ -47,12 +47,12 @@ if [[ "$should_notify" == "1" ]]; then
   rel2="https://github.com/openclaw/openclaw/releases/tag/${latest}"
   rel3="https://github.com/openclaw/openclaw/releases"
 
-  summary="$(python3 - <<'PY'
-import json, re, urllib.request
+  summary="$(CURRENT="$current" LATEST="$latest" python3 - <<'PY'
+import json, os, re, urllib.request
 from collections import Counter, defaultdict
 
-current='''$current'''.strip()
-latest='''$latest'''.strip()
+current=os.environ.get('CURRENT','').strip()
+latest=os.environ.get('LATEST','').strip()
 
 def parse_ver(v):
     try:
