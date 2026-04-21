@@ -11,8 +11,9 @@ Run one fixed remote operation: connect over SSH and execute alias `a-diu-n` on 
 
 1. Execute the helper script: `scripts/run-remote-ansible-diun.sh`.
 2. This run can take ~10 minutes; allow a long timeout and avoid rapid polling loops.
-3. On success, send the user a compact recap containing only:
+3. On success, send a clean recap in this exact shape:
    - `TASK [COMPARE initial and final outputs]`
+   - Bullet list, one updated image per line, formatted as `- image: old_id -> new_id`
    - `PLAY RECAP`
 4. On failure, report the key SSH/Ansible error and next action.
 
