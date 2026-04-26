@@ -16,6 +16,7 @@ exec-approvals.json
 devices/paired.json
 devices/pending.json
 identity/device-auth.json
+agents/*/agent/auth-state.json
 
 # Ephemeral command hash caches
 telegram/command-hash-*.txt
