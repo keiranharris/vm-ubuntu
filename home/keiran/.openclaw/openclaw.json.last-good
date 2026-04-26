@@ -1,12 +1,12 @@
 {
   "meta": {
-    "lastTouchedVersion": "2026.4.5",
-    "lastTouchedAt": "2026-04-07T00:39:41.734Z"
+    "lastTouchedVersion": "2026.4.24",
+    "lastTouchedAt": "2026-04-26T05:58:59.009Z"
   },
   "wizard": {
-    "lastRunAt": "2026-03-17T10:28:01.615Z",
-    "lastRunVersion": "2026.3.13",
-    "lastRunCommand": "doctor",
+    "lastRunAt": "2026-04-26T05:58:58.642Z",
+    "lastRunVersion": "2026.4.24",
+    "lastRunCommand": "onboard",
     "lastRunMode": "local"
   },
   "auth": {
@@ -97,7 +97,8 @@
       "host": "gateway",
       "security": "allowlist",
       "ask": "on-miss"
-    }
+    },
+    "profile": "coding"
   },
   "bindings": [
     {
@@ -132,7 +133,9 @@
       "enabled": true,
       "dmPolicy": "pairing",
       "groupPolicy": "allowlist",
-      "streaming": "partial",
+      "streaming": {
+        "mode": "partial"
+      },
       "network": {
         "autoSelectFamily": false
       },
@@ -143,7 +146,9 @@
           "dmPolicy": "pairing",
           "botToken": "8628133371:AAE3JroSI0MwI_Bxvd31yuTC-OWpG9O3WKE",
           "groupPolicy": "allowlist",
-          "streaming": "off"
+          "streaming": {
+            "mode": "off"
+          }
         },
         "keiran": {
           "name": "Spark",
@@ -151,13 +156,17 @@
           "dmPolicy": "pairing",
           "botToken": "8262488202:AAFMlciKlvrjdG0nzku-QSKMM3fLQny7AY0",
           "groupPolicy": "allowlist",
-          "streaming": "off"
+          "streaming": {
+            "mode": "off"
+          }
         },
         "default": {
           "enabled": false,
           "dmPolicy": "pairing",
           "groupPolicy": "allowlist",
-          "streaming": "off"
+          "streaming": {
+            "mode": "off"
+          }
         }
       }
     }
@@ -183,6 +192,9 @@
         "contacts.add",
         "reminders.add"
       ]
+    },
+    "controlUi": {
+      "allowInsecureAuth": true
     }
   },
   "plugins": {

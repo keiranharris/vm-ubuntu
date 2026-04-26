@@ -1,19 +1,19 @@
 {
   "version": 1,
-  "generatedAt": "2026-04-25T21:56:20.945Z",
+  "generatedAt": "2026-04-26T07:00:04.500Z",
   "reason": "unhandled_rejection",
   "process": {
-    "pid": 350769,
+    "pid": 363447,
     "platform": "linux",
     "arch": "x64",
     "node": "22.22.2",
-    "uptimeMs": 44099
+    "uptimeMs": 43902
   },
   "host": {
     "hostname": "<redacted-hostname>"
   },
   "snapshot": {
-    "generatedAt": "2026-04-25T21:56:20.946Z",
+    "generatedAt": "2026-04-26T07:00:04.500Z",
     "capacity": 1000,
     "count": 0,
     "dropped": 0,
