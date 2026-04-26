@@ -1,0 +1,1 @@
+/home/keiran/.npm-global/lib/node_modules/openclaw/dist/read-capability-NRo6-_mG.js

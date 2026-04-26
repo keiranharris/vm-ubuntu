@@ -1,0 +1,1 @@
+/home/keiran/.npm-global/lib/node_modules/openclaw/dist/plugins-install-persist-tJiSkVHE.js

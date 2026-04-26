@@ -1,0 +1,1 @@
+/home/keiran/.npm-global/lib/node_modules/openclaw/dist/diagnostic-support-bundle-2WBfmkS-.js

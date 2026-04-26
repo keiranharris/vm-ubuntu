@@ -35,8 +35,8 @@
       "api": "openai-codex-responses",
       "models": [
         {
-          "id": "gpt-5.4",
-          "name": "gpt-5.4",
+          "id": "gpt-5.5",
+          "name": "gpt-5.5",
           "api": "openai-codex-responses",
           "reasoning": true,
           "input": [

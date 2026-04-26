@@ -20,7 +20,7 @@ _openclaw_completion() {
         return 0
         ;;
       onboard)
-        opts=" --workspace --reset --reset-scope --non-interactive --accept-risk --flow --mode --auth-choice --token-provider --token --token-profile-id --token-expires-in --secret-input-mode --cloudflare-ai-gateway-account-id --cloudflare-ai-gateway-gateway-id --alibaba-model-studio-api-key --anthropic-api-key --arceeai-api-key --openrouter-api-key --byteplus-api-key --chutes-api-key --cloudflare-ai-gateway-api-key --deepseek-api-key --fal-api-key --fireworks-api-key --gemini-api-key --huggingface-api-key --kilocode-api-key --kimi-code-api-key --litellm-api-key --lmstudio-api-key --minimax-api-key --mistral-api-key --moonshot-api-key --openai-api-key --opencode-zen-api-key --opencode-go-api-key --qianfan-api-key --modelstudio-standard-api-key-cn --modelstudio-standard-api-key --modelstudio-api-key-cn --modelstudio-api-key --runway-api-key --stepfun-api-key --synthetic-api-key --together-api-key --venice-api-key --ai-gateway-api-key --volcengine-api-key --vydra-api-key --xai-api-key --xiaomi-api-key --zai-api-key --custom-base-url --custom-api-key --custom-model-id --custom-provider-id --custom-compatibility --gateway-port --gateway-bind --gateway-auth --gateway-token --gateway-token-ref-env --gateway-password --remote-url --remote-token --tailscale --tailscale-reset-on-exit --install-daemon --no-install-daemon --skip-daemon --daemon-runtime --skip-channels --skip-skills --skip-search --skip-health --skip-ui --node-manager --json"
+        opts=" --workspace --reset --reset-scope --non-interactive --accept-risk --flow --mode --auth-choice --token-provider --token --token-profile-id --token-expires-in --secret-input-mode --cloudflare-ai-gateway-account-id --cloudflare-ai-gateway-gateway-id --alibaba-model-studio-api-key --anthropic-api-key --arceeai-api-key --openrouter-api-key --byteplus-api-key --chutes-api-key --cloudflare-ai-gateway-api-key --comfy-api-key --deepseek-api-key --fal-api-key --fireworks-api-key --gemini-api-key --huggingface-api-key --kilocode-api-key --kimi-code-api-key --litellm-api-key --lmstudio-api-key --minimax-api-key --mistral-api-key --moonshot-api-key --nvidia-api-key --openai-api-key --opencode-zen-api-key --opencode-go-api-key --qianfan-api-key --modelstudio-standard-api-key-cn --modelstudio-standard-api-key --modelstudio-api-key-cn --modelstudio-api-key --runway-api-key --stepfun-api-key --synthetic-api-key --tokenhub-api-key --together-api-key --venice-api-key --ai-gateway-api-key --volcengine-api-key --vydra-api-key --xai-api-key --xiaomi-api-key --zai-api-key --custom-base-url --custom-api-key --custom-model-id --custom-provider-id --custom-compatibility --gateway-port --gateway-bind --gateway-auth --gateway-token --gateway-token-ref-env --gateway-password --remote-url --remote-token --tailscale --tailscale-reset-on-exit --install-daemon --no-install-daemon --skip-daemon --daemon-runtime --skip-channels --skip-skills --skip-bootstrap --skip-search --skip-health --skip-ui --node-manager --json"
         COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
         return 0
         ;;
@@ -105,7 +105,7 @@ _openclaw_completion() {
         return 0
         ;;
       gateway)
-        opts="run status install uninstall start stop restart call usage-cost health probe discover --port --bind --token --auth --password --password-file --tailscale --tailscale-reset-on-exit --allow-unconfigured --dev --reset --force --verbose --cli-backend-logs --claude-cli-logs --ws-log --compact --raw-stream --raw-stream-path"
+        opts="run status install uninstall start stop restart call usage-cost health stability diagnostics probe discover --port --bind --token --auth --password --password-file --tailscale --tailscale-reset-on-exit --allow-unconfigured --dev --reset --force --verbose --cli-backend-logs --claude-cli-logs --ws-log --compact --raw-stream --raw-stream-path"
         COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
         return 0
         ;;
@@ -165,12 +165,12 @@ _openclaw_completion() {
         return 0
         ;;
       tui)
-        opts=" --url --token --password --session --deliver --thinking --message --timeout-ms --history-limit"
+        opts=" --local --url --token --password --session --deliver --thinking --message --timeout-ms --history-limit"
         COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
         return 0
         ;;
       cron)
-        opts="status list add rm enable disable runs run edit "
+        opts="status list add rm enable disable show runs run edit "
         COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
         return 0
         ;;
@@ -190,7 +190,7 @@ _openclaw_completion() {
         return 0
         ;;
       hooks)
-        opts="list info check enable disable install update "
+        opts="list info check enable disable relay install update "
         COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
         return 0
         ;;
@@ -210,7 +210,7 @@ _openclaw_completion() {
         return 0
         ;;
       browser)
-        opts="status start stop reset-profile tabs tab open focus close profiles create-profile delete-profile screenshot snapshot navigate resize click type press hover scrollintoview drag select upload waitfordownload download dialog fill wait evaluate console pdf responsebody highlight errors requests trace cookies storage set --browser-profile --json --url --token --timeout --expect-final"
+        opts="status doctor start stop reset-profile tabs tab open focus close profiles create-profile delete-profile screenshot snapshot navigate resize click click-coords type press hover scrollintoview drag select upload waitfordownload download dialog fill wait evaluate console pdf responsebody highlight errors requests trace cookies storage set --browser-profile --json --url --token --timeout --expect-final"
         COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
         return 0
         ;;

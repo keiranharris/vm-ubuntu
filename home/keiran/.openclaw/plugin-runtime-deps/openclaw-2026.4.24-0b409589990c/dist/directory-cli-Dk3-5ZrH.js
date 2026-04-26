@@ -1,0 +1,1 @@
+/home/keiran/.npm-global/lib/node_modules/openclaw/dist/directory-cli-Dk3-5ZrH.js

@@ -1,0 +1,1 @@
+/home/keiran/.npm-global/lib/node_modules/openclaw/dist/skills-install-AV2OrCdz.js

@@ -1,0 +1,1 @@
+/home/keiran/.npm-global/lib/node_modules/openclaw/dist/stale-plugin-config-Cc96PZ8x.js

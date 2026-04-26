@@ -1,0 +1,1 @@
+/home/keiran/.npm-global/lib/node_modules/openclaw/dist/persistent-bindings.resolve-CPFjJxo8.js

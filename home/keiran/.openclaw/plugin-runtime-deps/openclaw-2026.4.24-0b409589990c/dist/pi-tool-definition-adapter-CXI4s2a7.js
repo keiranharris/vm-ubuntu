@@ -1,0 +1,1 @@
+/home/keiran/.npm-global/lib/node_modules/openclaw/dist/pi-tool-definition-adapter-CXI4s2a7.js

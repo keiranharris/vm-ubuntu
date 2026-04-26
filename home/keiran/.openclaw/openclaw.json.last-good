@@ -1,0 +1,206 @@
+{
+  "meta": {
+    "lastTouchedVersion": "2026.4.5",
+    "lastTouchedAt": "2026-04-07T00:39:41.734Z"
+  },
+  "wizard": {
+    "lastRunAt": "2026-03-17T10:28:01.615Z",
+    "lastRunVersion": "2026.3.13",
+    "lastRunCommand": "doctor",
+    "lastRunMode": "local"
+  },
+  "auth": {
+    "profiles": {
+      "anthropic:default": {
+        "provider": "anthropic",
+        "mode": "api_key"
+      }
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "openai-codex/gpt-5.3-codex",
+        "fallbacks": []
+      },
+      "workspace": "/home/keiran/.openclaw/workspace-keiran",
+      "compaction": {
+        "mode": "safeguard"
+      },
+      "heartbeat": {
+        "every": "2h",
+        "model": "openai-codex/gpt-5.3-codex",
+        "session": "main",
+        "target": "slack",
+        "prompt": "Check: Any blockers, opportunities, or progress updates needed?"
+      },
+      "maxConcurrent": 4,
+      "subagents": {
+        "maxConcurrent": 8
+      }
+    },
+    "list": [
+      {
+        "id": "keiran",
+        "name": "keiran",
+        "workspace": "/home/keiran/.openclaw/workspace-keiran",
+        "agentDir": "/home/keiran/.openclaw/agents/keiran/agent",
+        "model": "openai-codex/gpt-5.3-codex",
+        "heartbeat": {
+          "every": "2h"
+        },
+        "identity": {
+          "name": "Spark",
+          "theme": "Personal AI operator",
+          "emoji": "⚡",
+          "avatar": "avatars/spark.png"
+        },
+        "tools": {
+          "exec": {
+            "host": "gateway",
+            "security": "full",
+            "ask": "off"
+          }
+        }
+      },
+      {
+        "id": "marina",
+        "name": "marina",
+        "workspace": "/home/keiran/.openclaw/workspace-marina",
+        "agentDir": "/home/keiran/.openclaw/agents/marina/agent",
+        "model": "openai-codex/gpt-5.3-codex",
+        "heartbeat": {
+          "every": "2h"
+        },
+        "identity": {
+          "name": "Clover",
+          "theme": "Household AI companion",
+          "emoji": "🍀",
+          "avatar": "avatars/clover.png"
+        }
+      }
+    ]
+  },
+  "tools": {
+    "web": {
+      "search": {
+        "enabled": true,
+        "maxResults": 5,
+        "timeoutSeconds": 30,
+        "cacheTtlMinutes": 15
+      },
+      "fetch": {
+        "enabled": true
+      }
+    },
+    "exec": {
+      "host": "gateway",
+      "security": "allowlist",
+      "ask": "on-miss"
+    }
+  },
+  "bindings": [
+    {
+      "agentId": "marina",
+      "match": {
+        "channel": "telegram",
+        "accountId": "marina"
+      }
+    },
+    {
+      "agentId": "keiran",
+      "match": {
+        "channel": "telegram",
+        "accountId": "keiran"
+      }
+    }
+  ],
+  "messages": {
+    "ackReactionScope": "group-mentions"
+  },
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto",
+    "restart": true,
+    "ownerDisplay": "raw"
+  },
+  "session": {
+    "dmScope": "per-peer"
+  },
+  "channels": {
+    "telegram": {
+      "enabled": true,
+      "dmPolicy": "pairing",
+      "groupPolicy": "allowlist",
+      "streaming": "partial",
+      "network": {
+        "autoSelectFamily": false
+      },
+      "accounts": {
+        "marina": {
+          "name": "Quark",
+          "enabled": true,
+          "dmPolicy": "pairing",
+          "botToken": "8628133371:AAE3JroSI0MwI_Bxvd31yuTC-OWpG9O3WKE",
+          "groupPolicy": "allowlist",
+          "streaming": "off"
+        },
+        "keiran": {
+          "name": "Spark",
+          "enabled": true,
+          "dmPolicy": "pairing",
+          "botToken": "8262488202:AAFMlciKlvrjdG0nzku-QSKMM3fLQny7AY0",
+          "groupPolicy": "allowlist",
+          "streaming": "off"
+        },
+        "default": {
+          "enabled": false,
+          "dmPolicy": "pairing",
+          "groupPolicy": "allowlist",
+          "streaming": "off"
+        }
+      }
+    }
+  },
+  "gateway": {
+    "port": 18789,
+    "mode": "local",
+    "bind": "loopback",
+    "auth": {
+      "mode": "token",
+      "token": "804d2701c837c67360b54a9e0b25c62d76a34f95ea5a115a"
+    },
+    "tailscale": {
+      "mode": "off",
+      "resetOnExit": false
+    },
+    "nodes": {
+      "denyCommands": [
+        "camera.snap",
+        "camera.clip",
+        "screen.record",
+        "calendar.add",
+        "contacts.add",
+        "reminders.add"
+      ]
+    }
+  },
+  "plugins": {
+    "entries": {
+      "telegram": {
+        "enabled": true
+      },
+      "brave": {
+        "enabled": true,
+        "config": {
+          "webSearch": {
+            "apiKey": "BSAvm8JMSROs8DIwLO7YnwbZ_92epAi"
+          }
+        }
+      },
+      "openai": {
+        "enabled": true
+      }
+    }
+  }
+}

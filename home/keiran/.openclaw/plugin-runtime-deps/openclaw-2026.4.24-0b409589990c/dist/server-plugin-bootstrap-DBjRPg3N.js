@@ -1,0 +1,1 @@
+/home/keiran/.npm-global/lib/node_modules/openclaw/dist/server-plugin-bootstrap-DBjRPg3N.js

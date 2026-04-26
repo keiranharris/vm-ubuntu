@@ -1,0 +1,1 @@
+/home/keiran/.npm-global/lib/node_modules/openclaw/dist/commands-registry-normalize-RdSq7yWA.js
