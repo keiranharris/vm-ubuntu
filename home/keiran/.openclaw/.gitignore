@@ -2,6 +2,8 @@
 
 # Runtime jobs/state DB sidecars
 cron/jobs.json
+# Ignore any filename containing "state" anywhere in the path
+**/*state*
 tasks/*.sqlite-shm
 tasks/*.sqlite-wal
 flows/*.sqlite-shm
