@@ -1,10 +1,10 @@
 {
   "meta": {
     "lastTouchedVersion": "2026.4.24",
-    "lastTouchedAt": "2026-04-26T05:58:59.009Z"
+    "lastTouchedAt": "2026-05-02T02:49:19.626Z"
   },
   "wizard": {
-    "lastRunAt": "2026-04-26T05:58:58.642Z",
+    "lastRunAt": "2026-05-01T21:57:56.394Z",
     "lastRunVersion": "2026.4.24",
     "lastRunCommand": "onboard",
     "lastRunMode": "local"
@@ -14,13 +14,18 @@
       "anthropic:default": {
         "provider": "anthropic",
         "mode": "api_key"
+      },
+      "google-gemini-cli:keiran.harris@gmail.com": {
+        "provider": "google-gemini-cli",
+        "mode": "oauth",
+        "email": "keiran.harris@gmail.com"
       }
     }
   },
   "agents": {
     "defaults": {
       "model": {
-        "primary": "openai-codex/gpt-5.3-codex",
+        "primary": "google/gemini-3.1-pro-preview",
         "fallbacks": []
       },
       "workspace": "/home/keiran/.openclaw/workspace-keiran",
@@ -37,6 +42,12 @@
       "maxConcurrent": 4,
       "subagents": {
         "maxConcurrent": 8
+      },
+      "embeddedHarness": {
+        "runtime": "google-gemini-cli"
+      },
+      "models": {
+        "google/gemini-3.1-pro-preview": {}
       }
     },
     "list": [
@@ -87,7 +98,8 @@
         "enabled": true,
         "maxResults": 5,
         "timeoutSeconds": 30,
-        "cacheTtlMinutes": 15
+        "cacheTtlMinutes": 15,
+        "provider": "brave"
       },
       "fetch": {
         "enabled": true
@@ -174,7 +186,7 @@
   "gateway": {
     "port": 18789,
     "mode": "local",
-    "bind": "loopback",
+    "bind": "lan",
     "auth": {
       "mode": "token",
       "token": "804d2701c837c67360b54a9e0b25c62d76a34f95ea5a115a"
@@ -194,7 +206,10 @@
       ]
     },
     "controlUi": {
-      "allowInsecureAuth": true
+      "allowInsecureAuth": true,
+      "allowedOrigins": [
+        "https://10.1.100.10:18789"
+      ]
     }
   },
   "plugins": {
@@ -211,6 +226,9 @@
         }
       },
       "openai": {
+        "enabled": true
+      },
+      "google": {
         "enabled": true
       }
     }
