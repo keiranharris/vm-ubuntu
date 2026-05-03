@@ -1,1 +1,0 @@
-/home/keiran/.npm-global/lib/node_modules/openclaw/dist/sandbox-media-paths-B9X1-tSa.js

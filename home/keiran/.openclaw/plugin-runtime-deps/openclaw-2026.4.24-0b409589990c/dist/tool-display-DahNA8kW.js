@@ -1,1 +1,0 @@
-/home/keiran/.npm-global/lib/node_modules/openclaw/dist/tool-display-DahNA8kW.js

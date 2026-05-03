@@ -1,1 +1,0 @@
-/home/keiran/.npm-global/lib/node_modules/openclaw/dist/setup-surface-CjW_2Sf-.js

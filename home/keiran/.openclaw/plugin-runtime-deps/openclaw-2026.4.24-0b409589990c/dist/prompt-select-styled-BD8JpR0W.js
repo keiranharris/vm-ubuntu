@@ -1,1 +1,0 @@
-/home/keiran/.npm-global/lib/node_modules/openclaw/dist/prompt-select-styled-BD8JpR0W.js

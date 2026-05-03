@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "generatedAt": "2026-05-03T09:21:08.952Z",
+  "reason": "unhandled_rejection",
+  "process": {
+    "pid": 540233,
+    "platform": "linux",
+    "arch": "x64",
+    "node": "22.22.2",
+    "uptimeMs": 43810
+  },
+  "host": {
+    "hostname": "<redacted-hostname>"
+  },
+  "snapshot": {
+    "generatedAt": "2026-05-03T09:21:08.952Z",
+    "capacity": 1000,
+    "count": 0,
+    "dropped": 0,
+    "events": [],
+    "summary": {
+      "byType": {}
+    }
+  }
+}

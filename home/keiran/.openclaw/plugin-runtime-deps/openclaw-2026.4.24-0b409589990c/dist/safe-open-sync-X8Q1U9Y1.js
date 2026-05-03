@@ -1,1 +1,0 @@
-/home/keiran/.npm-global/lib/node_modules/openclaw/dist/safe-open-sync-X8Q1U9Y1.js

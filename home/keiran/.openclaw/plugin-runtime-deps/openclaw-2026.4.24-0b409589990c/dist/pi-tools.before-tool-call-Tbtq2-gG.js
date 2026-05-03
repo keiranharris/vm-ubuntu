@@ -1,1 +1,0 @@
-/home/keiran/.npm-global/lib/node_modules/openclaw/dist/pi-tools.before-tool-call-Tbtq2-gG.js

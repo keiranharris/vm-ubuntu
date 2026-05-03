@@ -1,12 +1,12 @@
 {
   "meta": {
-    "lastTouchedVersion": "2026.4.24",
-    "lastTouchedAt": "2026-05-02T02:49:19.626Z"
+    "lastTouchedVersion": "2026.5.2",
+    "lastTouchedAt": "2026-05-03T11:14:05.782Z"
   },
   "wizard": {
-    "lastRunAt": "2026-05-01T21:57:56.394Z",
-    "lastRunVersion": "2026.4.24",
-    "lastRunCommand": "onboard",
+    "lastRunAt": "2026-05-03T10:53:35.855Z",
+    "lastRunVersion": "2026.5.2",
+    "lastRunCommand": "doctor",
     "lastRunMode": "local"
   },
   "auth": {
@@ -17,8 +17,7 @@
       },
       "google-gemini-cli:keiran.harris@gmail.com": {
         "provider": "google-gemini-cli",
-        "mode": "oauth",
-        "email": "keiran.harris@gmail.com"
+        "mode": "oauth"
       }
     }
   },
@@ -34,7 +33,7 @@
       },
       "heartbeat": {
         "every": "2h",
-        "model": "openai-codex/gpt-5.3-codex",
+        "model": "google-gemini-cli/gemini-3.1-pro-preview",
         "session": "main",
         "target": "slack",
         "prompt": "Check: Any blockers, opportunities, or progress updates needed?"
@@ -43,11 +42,17 @@
       "subagents": {
         "maxConcurrent": 8
       },
-      "embeddedHarness": {
-        "runtime": "google-gemini-cli"
-      },
       "models": {
-        "google/gemini-3.1-pro-preview": {}
+        "google-gemini-cli/gemini-3.1-pro-preview": {},
+        "google-gemini-cli/gemini-3-flash-preview": {},
+        "google/gemini-3.1-pro-preview": {},
+        "google/gemini-3-flash-preview": {}
+      },
+      "contextInjection": "always",
+      "bootstrapMaxChars": 20000,
+      "bootstrapTotalMaxChars": 150000,
+      "agentRuntime": {
+        "id": "google-gemini-cli"
       }
     },
     "list": [
@@ -56,7 +61,7 @@
         "name": "keiran",
         "workspace": "/home/keiran/.openclaw/workspace-keiran",
         "agentDir": "/home/keiran/.openclaw/agents/keiran/agent",
-        "model": "openai-codex/gpt-5.3-codex",
+        "model": "google/gemini-3-flash-preview",
         "heartbeat": {
           "every": "2h"
         },
@@ -72,6 +77,9 @@
             "security": "full",
             "ask": "off"
           }
+        },
+        "agentRuntime": {
+          "id": "google-gemini-cli"
         }
       },
       {
@@ -79,7 +87,7 @@
         "name": "marina",
         "workspace": "/home/keiran/.openclaw/workspace-marina",
         "agentDir": "/home/keiran/.openclaw/agents/marina/agent",
-        "model": "openai-codex/gpt-5.3-codex",
+        "model": "google/gemini-3-flash-preview",
         "heartbeat": {
           "every": "2h"
         },
@@ -88,6 +96,9 @@
           "theme": "Household AI companion",
           "emoji": "🍀",
           "avatar": "avatars/clover.png"
+        },
+        "agentRuntime": {
+          "id": "google-gemini-cli"
         }
       }
     ]
@@ -208,11 +219,20 @@
     "controlUi": {
       "allowInsecureAuth": true,
       "allowedOrigins": [
-        "https://10.1.100.10:18789"
+        "https://openclaw.bex36.live"
       ]
-    }
+    },
+    "trustedProxies": [
+      "127.0.0.1",
+      "10.1.3.50"
+    ]
   },
   "plugins": {
+    "allow": [
+      "brave",
+      "telegram",
+      "google"
+    ],
     "entries": {
       "telegram": {
         "enabled": true
@@ -225,11 +245,147 @@
           }
         }
       },
-      "openai": {
-        "enabled": true
-      },
       "google": {
         "enabled": true
+      },
+      "bonjour": {
+        "enabled": false
+      }
+    }
+  },
+  "skills": {
+    "entries": {
+      "1password": {
+        "enabled": false
+      },
+      "apple-notes": {
+        "enabled": false
+      },
+      "apple-reminders": {
+        "enabled": false
+      },
+      "bear-notes": {
+        "enabled": false
+      },
+      "blogwatcher": {
+        "enabled": false
+      },
+      "blucli": {
+        "enabled": false
+      },
+      "bluebubbles": {
+        "enabled": false
+      },
+      "camsnap": {
+        "enabled": false
+      },
+      "coding-agent": {
+        "enabled": false
+      },
+      "discord": {
+        "enabled": false
+      },
+      "eightctl": {
+        "enabled": false
+      },
+      "gh-issues": {
+        "enabled": false
+      },
+      "gifgrep": {
+        "enabled": false
+      },
+      "github": {
+        "enabled": false
+      },
+      "gog": {
+        "enabled": false
+      },
+      "goplaces": {
+        "enabled": false
+      },
+      "himalaya": {
+        "enabled": false
+      },
+      "imsg": {
+        "enabled": false
+      },
+      "mcporter": {
+        "enabled": false
+      },
+      "model-usage": {
+        "enabled": false
+      },
+      "nano-pdf": {
+        "enabled": false
+      },
+      "notion": {
+        "enabled": false
+      },
+      "obsidian": {
+        "enabled": false
+      },
+      "openai-whisper": {
+        "enabled": false
+      },
+      "openai-whisper-api": {
+        "enabled": false
+      },
+      "openhue": {
+        "enabled": false
+      },
+      "oracle": {
+        "enabled": false
+      },
+      "ordercli": {
+        "enabled": false
+      },
+      "peekaboo": {
+        "enabled": false
+      },
+      "sag": {
+        "enabled": false
+      },
+      "session-logs": {
+        "enabled": false
+      },
+      "sherpa-onnx-tts": {
+        "enabled": false
+      },
+      "slack": {
+        "enabled": false
+      },
+      "songsee": {
+        "enabled": false
+      },
+      "sonoscli": {
+        "enabled": false
+      },
+      "spotify-player": {
+        "enabled": false
+      },
+      "summarize": {
+        "enabled": false
+      },
+      "things-mac": {
+        "enabled": false
+      },
+      "tmux": {
+        "enabled": false
+      },
+      "trello": {
+        "enabled": false
+      },
+      "video-frames": {
+        "enabled": false
+      },
+      "voice-call": {
+        "enabled": false
+      },
+      "wacli": {
+        "enabled": false
+      },
+      "xurl": {
+        "enabled": false
       }
     }
   }

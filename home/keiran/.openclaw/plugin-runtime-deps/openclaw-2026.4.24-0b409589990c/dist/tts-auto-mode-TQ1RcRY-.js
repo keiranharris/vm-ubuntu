@@ -1,1 +1,0 @@
-/home/keiran/.npm-global/lib/node_modules/openclaw/dist/tts-auto-mode-TQ1RcRY-.js

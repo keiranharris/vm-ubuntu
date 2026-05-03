@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "generatedAt": "2026-05-03T10:51:15.244Z",
+  "reason": "gateway.startup_failed",
+  "process": {
+    "pid": 567898,
+    "platform": "linux",
+    "arch": "x64",
+    "node": "22.22.2",
+    "uptimeMs": 4020
+  },
+  "host": {
+    "hostname": "<redacted-hostname>"
+  },
+  "error": {
+    "name": "Error",
+    "message": "Invalid config at /home/keiran/.openclaw/openclaw.json. tools.web.search.provider: web_search provider is not available: brave (install or enable plugin \"brave\", then run openclaw doctor --fix) Run \"openclaw doctor --fix\" to repair, then retry."
+  },
+  "snapshot": {
+    "generatedAt": "2026-05-03T10:51:15.245Z",
+    "capacity": 1000,
+    "count": 0,
+    "dropped": 0,
+    "events": [],
+    "summary": {
+      "byType": {}
+    }
+  }
+}

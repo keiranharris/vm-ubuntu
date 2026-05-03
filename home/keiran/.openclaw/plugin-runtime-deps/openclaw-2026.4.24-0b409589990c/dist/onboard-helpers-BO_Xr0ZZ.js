@@ -1,1 +1,0 @@
-/home/keiran/.npm-global/lib/node_modules/openclaw/dist/onboard-helpers-BO_Xr0ZZ.js

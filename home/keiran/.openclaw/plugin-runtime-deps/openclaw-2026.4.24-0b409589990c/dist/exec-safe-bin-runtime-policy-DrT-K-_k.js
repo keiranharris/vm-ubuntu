@@ -1,1 +1,0 @@
-/home/keiran/.npm-global/lib/node_modules/openclaw/dist/exec-safe-bin-runtime-policy-DrT-K-_k.js
